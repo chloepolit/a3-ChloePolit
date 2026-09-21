@@ -16,8 +16,8 @@ const loadList = async function() {
       <td class="cell-deadline">${item.deadline}</td>
       <td class="cell-priority">${item.priority}</td>
       <td>
-        <button class="edit-btn">Edit</button>
-        <button class="delete-btn">Delete</button>
+        <button class="btn btn-primary edit-btn">Edit</button>
+        <button class="btn btn-danger delete-btn">Delete</button>
       </td>
     `
     tbody.appendChild(row)

@@ -12,15 +12,16 @@
 
 
   <body>
-    <main>
-    <button id="logout-btn" class="button">Log Out</button>
+    <main class="container mt-4">
+    <button id="logout-btn" class="btn btn-outline-secondary">Log Out</button>
     <script src="js/authenticate.js"></script>
+    <form>
     <h1>Add a Task</h1>
-    <p>
-        <label for="task">Task:</label>
-        <input type="text" id="task" name="user_name">
+    <p class="mb-3">
+        <label for="task" class="form-label">Task:</label>
+        <input type="text" id="task" name="user_name" class="form-control">
     </p>
-    <p>
+    <p class="mb-3">
         <label for="deadline">Deadline:</label>
         <input type="datetime-local" 
         id="deadline" 
@@ -28,7 +29,7 @@
         min="2026-09-04T00:00"
         max="2026-12-31T23:59">
     </p>
-    <p>
+    <p class="mb-3">
         <label for="creation-date">Creation Date:</label>
         <input type="datetime-local" 
         id="creation-date" 
@@ -36,23 +37,25 @@
         min="2026-09-04T00:00"
         max="2026-12-31T23:59">
     </p>
-    <p>
-        <label for="category">Choose a category:</label>
-        <select id="category" name="category">
+    <p class="mb-3">
+        <label for="category" class="form-label">Choose a category:</label>
+        <select id="category" name="category" class="form-select">
             <option value="classes">Classes</option>
             <option value="work">Work</option>
             <option value="personal">Personal</option>
         </select>
     </p>
-    <p>
-        <span>Recurring task?</span>
-        <label><input type="radio" name="recurring" value="yes"> Yes</label>
-        <label><input type="radio" name="recurring" value="no" checked> No</label>
+    <p class="mb-3">
+        <span class="form-label">Recurring task?</span>
+        <label><input type="radio" name="recurring" value="yes" class="form-check-input"> Yes</label>
+        <label><input type="radio" name="recurring" value="no" checked class="form-check-input"> No</label>
     </p>
-    <button type="submit" class="button">Add</button>
-    
+    <br>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <br>
     </form>
-    <a href="/list.html" class="button">View Current Tasks</a>
+    <br>
+    <a href="/list.html" class="btn btn-secondary">View Current Tasks</a>
     </main>
   </body>
 </html>
