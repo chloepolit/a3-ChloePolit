@@ -12,16 +12,19 @@ const submit = async function( event ) {
         creationDate = document.querySelector('#creation-date'),
         category     = document.querySelector( '#category' )
 
+  const recurring = document.querySelector('input[name="recurring"]:checked')
+
   const json = {
     task: task.value,
     deadline: deadline.value,
     creationDate: creationDate.value,
-    category: category.value
+    category: category.value,
+    isRecurring: recurring.value === 'yes'
   }
 
   const body = JSON.stringify( json )
 
-  const response = await fetch( '/my-handling-form-page', {
+  const response = await fetch( '/data', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body
